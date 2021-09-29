@@ -1,12 +1,22 @@
 h1 {
     color: darkmagenta ;
     text-align: center;
-}
+    }
 
+#welcome{
+    vertical-align: center;
+}
 body {
     font-family: Candara;
     background : url("/_assets/fonds d'écran.jpg");
     background-size: cover;
+    display : flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex:1;
 }
 
 header {
@@ -17,24 +27,31 @@ header {
 ul {
     padding-left: 2rem;
     list-style-type: none;
+    text-align: start;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+}
 #git{
     font-size : 1rem;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-}
+    text-align: end;
+    }
 
-p{
-    text-align: center;
-}
-#git\ image{
+#imageGit{
     width: 25px;
+     text-align:start;
+    margin:0;
+    display: inline;
+}
+p{
+    text-align: justify;
+
 }
 
 img{
-    width: 300px;
+    width: 400px;
     text-align:center;
     margin:auto;
     display:flex;
