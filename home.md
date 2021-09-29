@@ -1,8 +1,8 @@
 ---
 layout: root.html
-title: Accueil de mon blog
+title: Accueil
 permalink: /
 
 ---
 
-# Bienvenue ...
+# Bienvenue dans mon blog de licorne !
