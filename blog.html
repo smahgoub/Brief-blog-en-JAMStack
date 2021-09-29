@@ -1,0 +1,50 @@
+---
+layout: root.html
+title: Le blog de Jules
+permalink: "/blog/page-{{ pagination.pageNumber }}/index.html"
+pagination:
+    data: collections.posts
+    size: 3
+    alias: posts
+---
+
+<section>
+    <h1>
+        Mes artcicles de blog
+    </h1>
+
+    <nav id="nav-blog">
+        <ol>
+            <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">Prem.</a>{% else
+                %}Prem.{% endif %}
+            </li>
+            <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Prec.</a>{% else
+                %}Prec.{% endif %}
+            </li>
+            {%- for pageEntry in pagination.pages %}
+            {% if page.url==pagination.hrefs[forloop.index0] %}
+            <li>
+                <a href="{{ pagination.hrefs[forloop.index0] }}"
+                   aria-current="page">Page {{ forloop.index }}</a>
+            </li>
+            {% endif %}
+            {%- endfor %}
+            <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Suiv.</a>{% else %}Suiv.{% endif %}
+            </li>
+            <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Dern.</a>{% else %}Dern.{%
+                endif %}
+            </li>
+        </ol>
+    </nav>
+
+    {%- for post in posts reversed -%}
+    <article>
+        <div class="div-article-header">
+            <h2>
+                <a href="{{post.url | url}}">{{ post.data.title }}</a>
+            </h2>
+        </div>
+        <p>{{ post.templateContent | truncate: 512 }} <a href="{{post.url | url}}">(Lire la suite...)</a></p>
+    </article>
+    {%- endfor -%}
+</section>

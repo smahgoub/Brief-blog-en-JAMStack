@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title or metadata.title }}</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Mon blog de la mort </h1>
+    <nav>
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/about">A propos de moi</a></li>
+            <li><a href="/blog/page-0">Mes articles</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    {{ content | safe }}
+</main>
+
+<footer>
+    <p><a href="https://github.com/smahgoub/">Retrouvez-moi sur Github</a></p>
+</footer>
+
+</body>
+</html>
