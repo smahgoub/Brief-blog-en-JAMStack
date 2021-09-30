@@ -4,7 +4,7 @@ title: Le blog de Sabrine
 permalink: "/blog/page-{{ pagination.pageNumber }}/index.html"
 pagination:
     data: collections.posts
-    size: 1
+    size: 2
     alias: posts
 ---
 
@@ -13,7 +13,7 @@ pagination:
         Mes artcicles de Licorne
     </h1>
 
-    <nav id="nav-blog">
+    <nav id="nav-blog" class="nav-blog">
         <ol>
             <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">Prem.</a>{% else
                 %}Prem.{% endif %}

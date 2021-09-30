@@ -36,6 +36,11 @@ header {
 a{
     text-decoration: none;
 }
+
+#menu{
+    background-color: pink;
+    padding:0;
+}
 nav > ul{
     margin:3rem;
     display: flex;
@@ -48,7 +53,7 @@ nav > ul{
 /* on modifie la disposition du menu en fonction de la taille de l'écran */
 @media all and (min-width :450px) {
     nav > ul {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
     }}
 
@@ -82,3 +87,7 @@ img{
        width: 400px;
        height: auto;
     }}
+
+.nav-blog{
+    font-size:2rem;
+}
